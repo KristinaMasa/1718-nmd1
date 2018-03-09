@@ -66,6 +66,12 @@ a:hover:before{
     position: absolute;
     top: 30px;
 }
+img{
+    width: 150px;
+    float: right;
+    position: relative;
+    top: 90px;
+}
 
 
 
