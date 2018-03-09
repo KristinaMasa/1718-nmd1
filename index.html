@@ -11,17 +11,17 @@
 
 <body> 
     <h1>Curriculum Vitae Kristina Masalitina <i class="fa fa-handshake-o" aria-hidden="true"></i></h1>
-    <hr>
     <nav>
-         <a href="#pers">persoonlijke gegevens</a> <br>
-         <a href="#opl">opleiding/cursussen</a> <br>
-         <a href="#werk">werkervaring</a> <br>
-         <a href="#taal">taalvaardigheid</a><br>
-         <a href="#inter">interesses</a><br>
+         <a href="#pers">persoonlijke gegevens</a> 
+         <a href="#opl">opleiding/cursussen</a> 
+         <a href="#werk">werkervaring</a> 
+         <a href="#taal">taalvaardigheid</a>
+         <a href="#inter">interesses</a>
 
 
     </nav>
-    <div class="test1" id="pers"><h2> Persoonlijke gegevens <i class="fa fa-address-card" aria-hidden="true"></i></h2></div>
+    <div class="body">
+    <div id="pers" class="test1" ><h2> Persoonlijke gegevens <i class="fa fa-address-card" aria-hidden="true"></i></h2></div>
     <p>
         <strong>naam:</strong> Kristina Masalitina <br>
         <strong>geboortedatum:</strong> 28 april 1997 <br>
@@ -30,23 +30,22 @@
         <strong>e-mail:</strong> 
         <a href="mailto:krismasa@student.arteveldehs.be"> krismasa@student.arteveldehs.be </a> <br>
     </p>
-    <img src="images/profielfoto.jpg" alt="Smiley face" height="200" width="200">
        
     
-     <div class="test1" id="opl"><h2>Opleiding/curussen <i class="fa fa-graduation-cap fa-spin" aria-hidden="true"></i></h2></div> 
+     <div id="opl" class="test1" ><h2>Opleiding/curussen <i class="fa fa-graduation-cap fa-spin" aria-hidden="true"></i></h2></div> 
         <p>   <strong>2017-2021:</strong> Bachelor grafische en digitale media <br>
         <strong>2016-2017:</strong> Visagiste Make-up Designory <br>
     </p>
 
     
-     <div class="test1" id="werk"><h2>werkervaring <i class="fa fa-check" aria-hidden="true"></i></h2></div>
+     <div id="werk" class="test1"><h2>werkervaring <i class="fa fa-check" aria-hidden="true"></i></h2></div>
        <p> <strong>2016:</strong> verkoopsmedewerker Wycon <br>
         <strong>2016 - heden:</strong> verkoopsmedewerker Bakkerij De Bonte <br>
 
     </p>
 
    
-     <div class="test1" id="taal"><h2>Taalvaardigheid <i class="fa fa-commenting" aria-hidden="true"></i></h2></div>
+     <div id="taal" class="test1"><h2>Taalvaardigheid <i class="fa fa-commenting" aria-hidden="true"></i></h2></div>
        <ol> 
           
         <li><strong>Nederlands: zeer goed</strong> 
@@ -85,11 +84,40 @@
 
 
     
-     <div class="test1" id="inter"><h2>Interesses <i class="fa fa-heart-o" aria-hidden="true"></i></h2></div>
+     <div id="inter" class="test1"><h2>Interesses <i class="fa fa-heart-o" aria-hidden="true"></i></h2></div>
      <p class="interesses">   reizen, muziek, fotografie, social media, cultuur, dans
     </p>
+        </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<!--start smooth scroll -->
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
 
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+        <!--end smooth scroll -->
     
 </body>
 </html>

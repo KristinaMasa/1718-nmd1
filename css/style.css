@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400');
 
 h1{
-    color: rgb(242, 149, 141);
+    background-color: rgb(242, 149, 141);
+    color: white;
     font-family: open sans, sans serif;
+    padding: 20px 0px 20px 40px;
+}
+.body{
+    max-width: 612px;;
+    width: 100%;
+    margin: 0 auto;
+    font-family: open sans, sans-serif;
+    line-height: 2em;
 }
 
 h2{
     color: rgb(104, 192, 177);
     font-family: open sans, sans serif;
 }
-
+nav a {
+    display: inline;
+    margin-left: 40px;
+    font-family: open sans, sans-serif;
+}
 p{
     color: grey;
     font-family: open sans;
@@ -28,18 +41,33 @@ ol{
 }
 
 .interesses{
-     color:rgb(232, 189, 245)
 }
-
 a{
     text-decoration: none;
-    color: rgb(164, 238, 222)
+    color: rgb(164, 238, 222);
+    position: relative;
+    transition: all 1s ease;
 }
 
-a:hover{
-    color: rgb(5, 4, 4);
-    font-weight: bold;
+a:before{
+    content:"";
+    width: 0px;
+    height: 3px;
+    background: rgb(104, 192, 177);
+    position: absolute;
+    top: 30px;
+    transition: all 0.5s ease;
 }
+a:hover:before{
+    content:"";
+    width: 30px;
+    height: 3px;
+    background: rgb(104, 192, 177);
+    position: absolute;
+    top: 30px;
+}
+
+
 
 a:visited{
          color: rgb(75, 73, 73);
@@ -47,13 +75,12 @@ a:visited{
 }
 
 .test1{
-       background-color: rgb(236, 231, 231);
+       background-color: white;
        padding-left: 10px;
        padding-right: 300px;
        padding-top: 3px;
        padding-bottom: 3px;
-
-       border: 1px solid black;
+       border: 1px solid rgb(236, 231, 231);;
        width: 300px;
        margin: 40px 40px 40px 0px;
 }
